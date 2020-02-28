@@ -1,0 +1,30 @@
+h1, h2  {
+	font-family: "Arial";
+}
+.titulo-principal {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 59px;
+    font-size: 64px;
+
+}
+.subtitulo-principal {
+	text-align: center;
+	background-color: black;
+	color: white;
+	font-size: 35px;
+}
+.minha-foto {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.minha-foto, aside {
+	float: right;
+	
+	box-sizing: border-box;
+	border-left: 10px solid black;
+	border-bottom: 10px solid black;
+}
