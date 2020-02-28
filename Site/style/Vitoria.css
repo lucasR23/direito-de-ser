@@ -1,0 +1,3 @@
+.container > p::first-letter {
+	font-family: 'Amatic SC', ;
+}
