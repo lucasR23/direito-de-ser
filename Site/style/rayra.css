@@ -1,0 +1,22 @@
+body {
+	font-family: 'Bad Script', serif;
+	background-color: #edf3fa;
+	font-size: 130%;
+	line-height: 1;
+}
+
+h1, h2 {
+	font-family: 'Poiret One', cursive;
+}
+
+.titulo {
+	margin: 0% 45% 0% 45%;
+	text-align: center;
+	color: #bdbdbd;
+	background-color: #edf3fa;
+}
+
+header{
+	background-color: black;
+	width: 100%
+}
