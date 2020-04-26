@@ -1,0 +1,31 @@
+
+<html>
+    <head>
+        <title>Teste de Reação</title>
+        <link rel="icon" href="Capturar.PNG">
+        <style type="text/css">
+            h1{
+                color:blue;
+                font-family:Burbank Big, Condensed;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="texto">Boa tarde família!!!</h1>
+
+        <button onclick="trocarTexto()">Trocar texto</button>
+
+        <script type="text/javascript">
+            function trocarTexto(){
+                var numero = 5
+                var numero2 = 10
+                console.log(numero+numero2)
+
+                var textHTML = document.getElementById("texto")
+                console.log(textHTML)
+
+                textHTML.innerHTML = "Mudando o html pelo javascript"
+            }
+        </script>
+     </body>
+</html>

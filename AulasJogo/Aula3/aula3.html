@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title></title>
+
+        <style>
+        </style>
+    </head>
+    <body>
+        <div id="quadrado"></div>
+        <button onclick="aparecerQuadrado()">Aperecer Quadrado</button>
+        <button onclick="destroirQuadrado()">Destroir Quadrado</button>
+        <button onclick="trocarCor()">Trocar Cor</button>
+        <button onclick="moveDireita()">Mover para direita</button>
+
+        <script>
+            function aparecerQuadrado(){
+                var quadrado = document.getElementById("quadrado");
+                quadrado.style.width = "100px";
+                quadrado.style.height = "100px";
+                quadrado.style.backgroundColor = "black";
+                quadrado.style.marginLeft = "0px";
+            }
+
+            function destroirQuadrado(){
+                var quadrado = document.getElementById("quadrado");
+                quadrado.style.width = 0;
+                quadrado.style.height = 0;
+            }
+
+            function trocarCor(){
+                var quadrado = document.getElementById("quadrado");
+                quadrado.style.backgroundColor = "green";
+            }
+
+            function moveDireita(){
+                var quadrado = document.getElementById("quadrado");
+                var margin = quadrado.style.marginLeft
+                console.log(margin)
+                quadrado.style.marginLeft = parseInt(margin) + 50
+                console.log(quadrado.style.marginLeft)
+            }
+        </script>
+    </body>
+</html>
