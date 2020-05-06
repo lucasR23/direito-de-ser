@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Joguinho</title>
+        <style>
+            #espaco{
+                width: 500px;
+                height: 500px;
+                border: 5px solid;
+            }
+
+            #quadrado{
+                background-color: aqua;
+                position: relative;
+                top: 100px;
+                left: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Jogo Tempo de Reação</h1>
+        <p>Clique nos quadrados e circulos o mais rapido que conseguir</p>
+        <p>Seu tempo de reação: </p>
+        
+        <section id="espaco">
+            <div id="quadrado"></div>     
+        </section>
+        <script>
+            function apareceQuadrado(){
+                var quadrado = document.getElementById("quadrado");
+                quadrado.style.width = "100px";
+                quadrado.style.height = "100px";
+            }
+
+            function someQuadrado(){
+                var quadrado = document.getElementById("quadrado");
+                quadrado.style.width = "0px";
+                quadrado.style.height= "0px";
+            }
+            
+            apareceQuadrado();
+            setTimeout(someQuadrado, 3000);
+        </script>
+    </body>
+</html>
