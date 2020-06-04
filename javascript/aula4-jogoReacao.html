@@ -12,34 +12,51 @@
             #quadrado{
                 background-color: aqua;
                 position: relative;
-                top: 100px;
-                left: 100px;
             }
         </style>
     </head>
     <body>
         <h1>Jogo Tempo de Reação</h1>
         <p>Clique nos quadrados e circulos o mais rapido que conseguir</p>
-        <p>Seu tempo de reação: </p>
+        <!-- <div style="display: inline-flex;">
+            <p>Seu tempo de reação: </p>
+            <p id="tempo">0,5</p>
+        </div> -->
+
+        <p>Seu tempo de reação: <span id="tempo"></span></p>
         
         <section id="espaco">
-            <div id="quadrado"></div>     
+            <div id="quadrado" onclick="someQuadrado()"></div>     
         </section>
         <script>
+            var comeco;
+            
             function apareceQuadrado(){
                 var quadrado = document.getElementById("quadrado");
                 quadrado.style.width = "100px";
                 quadrado.style.height = "100px";
+                
+                quadrado.style.top = Math.floor(Math.random() * 401)+"px";
+                quadrado.style.left = Math.floor(Math.random() * 401)+"px";
+
+                var d = new Date();
+                comeco = d.getTime();
             }
 
             function someQuadrado(){
                 var quadrado = document.getElementById("quadrado");
                 quadrado.style.width = "0px";
                 quadrado.style.height= "0px";
+
+                var d = new Date();
+                var final = d.getTime();
+
+                document.getElementById("tempo").innerHTML = (final-comeco)/1000;
+
+                setTimeout(apareceQuadrado, 1000);
             }
-            
+
             apareceQuadrado();
-            setTimeout(someQuadrado, 3000);
         </script>
     </body>
 </html>
